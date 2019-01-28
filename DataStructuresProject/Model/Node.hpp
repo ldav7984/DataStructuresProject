@@ -22,5 +22,28 @@ public:
     void setData(Type data);
 };
 
+//Template definitions
 
-#endif /* Node_h */
+template <class Type>
+Node<Type> :: Node(Type data)
+{
+    this->data = data;
+}
+//controller
+
+template <class Type>
+Type Node<Type> :: getData()
+{
+    return data;
+}
+//getter
+
+template <class Type>
+void Node<Type> :: setData(Type data)
+{
+    this->data = data;
+}
+//setter
+
+
+#endif /* Node_hpp */
