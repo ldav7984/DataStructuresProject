@@ -38,5 +38,39 @@ public:
     Type getFromIndex(int index);
     void setAtIndex(int index, Type data);
 };
+    
+    //Template definitions//
+    
+    //Constructor
+    template <class Type>
+    Array<Type> :: Array(int size)
+    {
+        assert(size > 0);
+        this->size = size;
+        
+        internalArray = new Type[size];
+    }
 
+    //Copy constructor
+    template <class Type>
+    Array<Type> :: Array(const Array<Type> & toCopy)
+    {
+        this->size = toCopy.getSize();
+        
+        internalArray = new Type[size];
+        
+        for(int index = 0; index < size; index++)
+        {
+            internalArray[index] = toCopy[index];
+        }
+    }
+    
+    //Destructor
+    template <class Type>
+    Array<Type> :: ~Array()
+    {
+        delete [] internalArray;
+    }
+    
+    
 #endif /* Array_hpp */
