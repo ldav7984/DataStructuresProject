@@ -23,27 +23,27 @@ public:
 };
 
 //Template definitions
+template <class Type>
+Node<Type> :: Node()
+{ } //constructor
 
 template <class Type>
 Node<Type> :: Node(Type data)
 {
     this->data = data;
-}
-//controller
+} //constructor
 
 template <class Type>
 Type Node<Type> :: getData()
 {
     return data;
-}
-//getter
+} //getter
 
 template <class Type>
 void Node<Type> :: setData(Type data)
 {
     this->data = data;
-}
-//setter
+} //setter
 
 
 #endif /* Node_hpp */
