@@ -110,7 +110,27 @@ public:
         return internalArray[index];
     }
     
+    //Methods//
     
+    template <class Type>
+    int Array<Type> :: getSize() const
+    {
+        return size;
+    }
     
+    template <class Type>
+    Type Array<Type> :: getFromIndex(int index)
+    {
+        assert(index >=0 && index < size);
+        Type value = internalArray[index];
+        return values;
+    }
     
+    template <class Type>
+    void Array<Type> :: setAtIndex(int pos, Type item)
+    {
+        assert(pos >= 0 && pos < size);
+        internalArray[pos] = item;
+    }
+
 #endif /* Array_hpp */
