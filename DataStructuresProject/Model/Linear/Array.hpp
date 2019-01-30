@@ -24,12 +24,12 @@ public:
     //Constructor
     Array<Type>(int size);
     //Copy Constructor
-    Array<Type<(const Array<Type> & toCopy);
+    Array<Type>(const Array<Type> & toCopy);
     //Destructor
     ~Array<Type>();
     
     //Operators
-    Array<Type< & operator = (const Array<Type< & toReplace);
+    Array<Type> & operator = (const Array<Type> & toReplace);
     Type& operator [] (int index);
     Type operator [] (int index) const;
     
@@ -57,6 +57,7 @@ public:
     {
         this->size = toCopy.getSize();
         
+        //Build data structure
         internalArray = new Type[size];
         
         for(int index = 0; index < size; index++)
@@ -72,7 +73,7 @@ public:
         delete [] internalArray;
     }
     
-    //Operators//
+    //Operator Overloads//
     
     template <class Type>
     Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
@@ -93,16 +94,14 @@ public:
         }
         return *this;
     }
-    
-    //"setter"
+
     template <class Type>
     Type & Array<Type> :: operator [] (int index)
     {
         assert(index >= 0 && index < size);
         return internalArray[index];
     }
-    
-    //"getter"
+
     template <class Type>
     Type Array<Type> :: operator [] (int index) const
     {
