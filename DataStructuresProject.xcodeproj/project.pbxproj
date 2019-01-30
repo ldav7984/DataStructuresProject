@@ -29,6 +29,7 @@
 		AB3AB43221FF8C0B00EDA599 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		AB3AB43421FF8C1600EDA599 /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
 		AB3AB43621FF916900EDA599 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		ABF54AEC220232A800BF1DE0 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3AB43621FF916900EDA599 /* Node.hpp */,
+				ABF54AEC220232A800BF1DE0 /* LinearNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
