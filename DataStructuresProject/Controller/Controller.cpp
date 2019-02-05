@@ -25,11 +25,15 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
 }
 
+//Test that the import works by using the FileController to
+//import the CrimeData as a C++ Vector and print it to the screen (with a loop)
+//to get at least the required lines for the assignment.
+
 void testFiles()
 {
-    for(int index = 234; index == 255; index ++)
+    for(int index = 234; index == 255; index++)
     {
-        cout << index << ": contents are: " << crimeVector[index] << endl;
+        cout << index << ": contents are: " << musicVector[index] << endl;
     }
     for(int index = 234; index == 255; index++)
     {
