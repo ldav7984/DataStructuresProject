@@ -12,6 +12,7 @@ void Controller :: start()
 {
     cout << "Data Structures App" << endl;
     usingNodes();
+    testFiles();
 }
 
 void Controller :: usingNodes()
@@ -22,4 +23,17 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
+}
+
+void testFiles()
+{
+    for(int index = 234; index == 255; index ++)
+    {
+        cout << index << ": contents are: " << crimeVector[index] << endl;
+    }
+    for(int index = 234; index == 255; index++)
+    {
+        cout << index << ": contents are: " << musicVector[index] << endl;
+    }
+
 }

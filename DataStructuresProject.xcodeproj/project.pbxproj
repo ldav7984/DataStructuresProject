@@ -77,7 +77,6 @@
 		AB3AB42521FF8B4900EDA599 /* DataStructuresProject */ = {
 			isa = PBXGroup;
 			children = (
-				ABFBEC5C220A1C6A0035D460 /* Data */,
 				AB3AB42D21FF8B8100EDA599 /* Model */,
 				AB3AB42E21FF8B8700EDA599 /* Controller */,
 				AB3AB42F21FF8B8E00EDA599 /* Diagrams */,
@@ -118,6 +117,12 @@
 		AB3AB43021FF8B9700EDA599 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABFBEC5D220A1CA70035D460 /* CrimeData.hpp */,
+				ABFBEC5E220A1CAF0035D460 /* CrimeData.cpp */,
+				ABFBEC60220A1CB60035D460 /* crime.csv */,
+				ABFBEC61220A1D0F0035D460 /* Music.cpp */,
+				ABFBEC63220A1D4A0035D460 /* Music.hpp */,
+				ABFBEC64220A1D570035D460 /* music.csv */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -137,19 +142,6 @@
 				ABF54AEE2202391400BF1DE0 /* Array.hpp */,
 			);
 			path = Linear;
-			sourceTree = "<group>";
-		};
-		ABFBEC5C220A1C6A0035D460 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				ABFBEC5D220A1CA70035D460 /* CrimeData.hpp */,
-				ABFBEC5E220A1CAF0035D460 /* CrimeData.cpp */,
-				ABFBEC60220A1CB60035D460 /* crime.csv */,
-				ABFBEC61220A1D0F0035D460 /* Music.cpp */,
-				ABFBEC63220A1D4A0035D460 /* Music.hpp */,
-				ABFBEC64220A1D570035D460 /* music.csv */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		ABFBEC65220A1F4A0035D460 /* Tools */ = {

@@ -12,6 +12,7 @@
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "FileController.hpp"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ private:
     void usingNodes();
 public:
     void start();
+    void testFiles();
 };
 
 #endif /* Controller_hpp */
