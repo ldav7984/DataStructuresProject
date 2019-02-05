@@ -23,12 +23,13 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
         //Keep reading until you are at the end of the file
         while (!dataFile.eof())
         {
-            //Grab each l ine from the CSV separated by the carriage return character
+            //Grab each line from the CSV separated by the carriage return character
             getline(dataFile, currentCSVLine, '\n');
             //Exclude header row
             if(rowCount != 0)
             {
-                //Create a CrimeData instance from the line. Exclude a blank line (usually if opened separately)
+                //Create a CrimeData instance from the line.
+                //Exclude a blank line (usually if opened separately)
                 if(currentCSVLine.length() != 0)
                 {
                     CrimeData row(currentCSVLine);
@@ -65,7 +66,8 @@ vector<Music> FileController :: musicDataToVector(string filename)
             //Exclude header row
             if(rowCount != 0)
             {
-                //Create a CrimeData instance from the line. Exclude a blank line (usually if opened separately)
+                //Create a CrimeData instance from the line.
+                //Exclude a blank line (usually if opened separately)
                 if(currentCSVLine.length() != 0)
                 {
                     Music row(currentCSVLine);

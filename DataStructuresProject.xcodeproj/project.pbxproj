@@ -117,8 +117,8 @@
 		AB3AB43021FF8B9700EDA599 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ABFBEC5D220A1CA70035D460 /* CrimeData.hpp */,
 				ABFBEC5E220A1CAF0035D460 /* CrimeData.cpp */,
+				ABFBEC5D220A1CA70035D460 /* CrimeData.hpp */,
 				ABFBEC60220A1CB60035D460 /* crime.csv */,
 				ABFBEC61220A1D0F0035D460 /* Music.cpp */,
 				ABFBEC63220A1D4A0035D460 /* Music.hpp */,

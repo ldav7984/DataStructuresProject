@@ -23,17 +23,25 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
+    
 }
 
 //Test that the import works by using the FileController to
 //import the CrimeData as a C++ Vector and print it to the screen (with a loop)
-//to get at least the required lines for the assignment.
+//to get at least the required lines for the assignment
 
-void testFiles()
+//In your Controller.cpp implement the testFiles method
+//with a for loop that will output the index (row)
+//and the item stored in the vector at that index to the console
+void Controller :: testFiles()
 {
+    vector<Music> musicVector = FileController :: musicDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/music.csv");
+
+    vector<CrimeData> crimeVector = FileController :: readCrimeDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+
     for(int index = 234; index == 255; index++)
     {
-        cout << index << ": contents are: " << musicVector[index] << endl;
+        cout << index << ": contents are: " << crimeVector[index] << endl;
     }
     for(int index = 234; index == 255; index++)
     {
