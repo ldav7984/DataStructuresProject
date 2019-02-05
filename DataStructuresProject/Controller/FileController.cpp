@@ -8,6 +8,7 @@
 
 #include "FileController.hpp"
 
+
 vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
 {
     std :: vector<CrimeData> crimeVector;
@@ -23,7 +24,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
         while (!dataFile.eof())
         {
             //Grab each l ine from the CSV separated by the carriage return character
-            getline(dataFile, currentCSVLine, '\r');
+            getline(dataFile, currentCSVLine, '\n');
             //Exclude header row
             if(rowCount != 0)
             {
@@ -60,7 +61,7 @@ vector<Music> FileController :: musicDataToVector(string filename)
         while (!dataFile.eof())
         {
             //Grab each l ine from the CSV separated by the carriage return character
-            getline(dataFile, currentCSVLine, '\r');
+            getline(dataFile, currentCSVLine, '\n');
             //Exclude header row
             if(rowCount != 0)
             {

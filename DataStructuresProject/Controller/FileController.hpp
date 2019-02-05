@@ -9,8 +9,9 @@
 #ifndef FileController_hpp
 #define FileController_hpp
 
-//#include "../Resources/CrimeData.hpp"
-//#include b"../Resources/Music.hpp"
+#include "../Data/CrimeData.hpp"
+#include "../Data/Music.hpp"
+
 #include <string>
 #include <fstream>
 #include <iostream>
