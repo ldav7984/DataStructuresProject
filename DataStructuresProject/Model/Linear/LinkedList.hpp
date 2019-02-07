@@ -38,6 +38,7 @@ public:
     //bool contains(Type item);
 };
 
+//Constructor
 LinkedList<Type> :: LinkedList()
 {
     this->front = nullptr;
@@ -45,7 +46,8 @@ LinkedList<Type> :: LinkedList()
     this->size = 0;
 }
 
-LinkedList<Type< :: ~LinkedList()
+//Destructor
+LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
     while (front !=  nullptr)
@@ -56,15 +58,19 @@ LinkedList<Type< :: ~LinkedList()
     }
 }
 
+
+//Structure Methods//
+
+//Adds an item
 void LinkedList<Type> ::  add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
     
-    if(this->size == 0)
+    if(this->size == 0) //if first item in list just add it to the first spot
     {
         this->front = newData;
     }
-    else
+    else //Else add it to the next spot
     {
         this->end->setNextNode(newData);
     }
@@ -73,14 +79,15 @@ void LinkedList<Type> ::  add(Type item)
     this->size += 1;
 }
 
+//Adds item to a certain place
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
-    if(index == this->size)
+    if(index == this->size) //If it's the first item just use the add() method.
     {
         add(item);
     }
-    else
+    else //Keeps track of pointers to traverse the nodes and adds the new item where needed
     {
         LinearNode<Type> * previous = nullptr;
         LinearNode<Type> * current = front;
@@ -95,13 +102,15 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
     this->size++;
 }
 
+//Returns what item is at the given index
 Type LinkedList<Type> :: getFromIndex(int index)
 {
-    assert(index >= 0 && index < this->size);
+    assert(index >= 0 && index < this->size); //Checks validity of parameter
     Type data;
     
     LinearNode<Type> * current = front;
     
+    //find that location and retrieve the value
     for (int position = 0; position < index; position++)
     {
         current = current->getNextNode();
@@ -114,7 +123,7 @@ Type LinkedList<Type> :: getFromIndex(int index)
 
 Type LinkedList<Type> :: remove(int index)
 {
-    assert(index >= 0 && index < this->size);
+    assert(index >= 0 && index < this->size); //Check index for validity
     
     LinearNod<Type> * current = front;
     LinearNode<Type> * toBeRemoved = nullptr;
@@ -122,12 +131,12 @@ Type LinkedList<Type> :: remove(int index)
     
     Type removedData;
     
-    if(index == 0)
+    if(index == 0) //if it's the first LinearNode in the structure
     {
         toBeRemoved = front;
         this->front = this->front->getNextNode();
     }
-    else
+    else //
     {
         for(int position = 0; position < index; position++)
         {
@@ -154,6 +163,9 @@ Type LinkedList<Type> :: remove(int index)
     delete toBeRemoved;
     return removedData;
 }
+
+
+//Helper Methods//
 
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
