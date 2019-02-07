@@ -6,8 +6,8 @@
 //  Copyright © 2019 Davis, Lauren. All rights reserved.
 //
 
-#ifndef List_h
-#define List_h
+#ifndef List_hpp
+#define List_hpp
 
 #include "../Nodes/LinearNode.hpp"
 #include <assert.h>
@@ -29,4 +29,4 @@ public:
     virtual LinearNode<Type> * getEnd() = 0;
 };
 
-#endif /* List_h */
+#endif /* List_hpp */
