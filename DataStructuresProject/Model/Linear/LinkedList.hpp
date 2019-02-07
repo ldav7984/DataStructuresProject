@@ -56,5 +56,62 @@ LinkedList<Type< :: ~LinkedList()
     }
 }
 
+void LinkedList<Type> ::  add(Type item)
+{
+    LinearNode<Type> * newData = new LinearNode<Type>(item);
+    
+    if(this->size == 0)
+    {
+        this->front = newData;
+    }
+    else
+    {
+        this->end->setNextNode(newData);
+    }
+    this->end = newData;
+    
+    this->size += 1;
+}
+
+void LinkedList<Type> :: addAtIndex(int index, Type item)
+{
+    assert(index >= 0 && index <= this->size);
+    if(index == this->size)
+    {
+        add(item);
+    }
+    else
+    {
+        LinearNode<Type> * previous = nullptr;
+        LinearNode<Type> * current = front;
+        for (int position = 0; position < index; position++)
+        {
+            previous = current;
+            current = current->getNextNode();
+        }
+        previous->setNextNode(toBeAdded);
+        toBeAdded->setNextNode(current);
+    }
+    this->size++;
+}
+
+Type LinkedList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    Type data;
+    
+    LinearNode<Type> * current = front;
+    
+    for (int position = 0; position < index; position++)
+    {
+        current = current->getNextNode();
+    }
+    
+    data = current->getData();
+    
+    return data;
+}
+
+
 
 #endif /* LinkedList_hp */
