@@ -39,6 +39,7 @@ public:
 };
 
 //Constructor
+template <class Type>
 LinkedList<Type> :: LinkedList()
 {
     this->front = nullptr;
@@ -47,6 +48,7 @@ LinkedList<Type> :: LinkedList()
 }
 
 //Destructor
+template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
@@ -62,7 +64,8 @@ LinkedList<Type> :: ~LinkedList()
 //Structure Methods//
 
 //Adds an item
-void LinkedList<Type> ::  add(Type item)
+template <class Type>
+void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
     
@@ -80,6 +83,7 @@ void LinkedList<Type> ::  add(Type item)
 }
 
 //Adds item to a certain place
+template <class Type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
@@ -103,6 +107,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
 }
 
 //Returns what item is at the given index
+template <class Type>
 Type LinkedList<Type> :: getFromIndex(int index)
 {
     assert(index >= 0 && index < this->size); //Checks validity of parameter
@@ -121,6 +126,7 @@ Type LinkedList<Type> :: getFromIndex(int index)
     return data;
 }
 
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size); //Check index for validity
@@ -167,16 +173,19 @@ Type LinkedList<Type> :: remove(int index)
 
 //Helper Methods//
 
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
     return this->end;
 }
 
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getFront()
 {
     return this->front;
 }
 
+template <class Type>
 int LinkedList<Type> :: getSize() const
 {
     return this->size;
