@@ -35,7 +35,7 @@ public:
     Type getFromIndex(int index);
     Type remove(int index);
     //Type setAtIndex(int index, Type item);
-    //bool contains(Type item);
+    bool contains(Type item);
 };
 
 //Constructor
@@ -169,6 +169,26 @@ Type LinkedList<Type> :: remove(int index)
     delete toBeRemoved;
     return removedData;
 }
+
+template <class Type>
+bool LinkedList<Type> :: contains(Type toFind)
+{
+    bool exists = false;
+    
+    LinearNode<Type> * searchPointer = front;
+    
+    for (int index = 0; index < getSize(); index++)
+    {
+        if (searchPointer ->getData() == thingToFind)
+        {
+            return true;
+        }
+        searchPointer = searchPonter->getNextNode();
+    }
+    
+    return exists;
+}
+
 
 
 //Helper Methods//

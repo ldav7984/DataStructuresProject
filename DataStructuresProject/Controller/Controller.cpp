@@ -38,7 +38,7 @@ void Controller :: testFiles()
     {
         cout << index << ": contents are: " << crimeVector[index] << endl;
     }
-    for(int index = 234; index <256; index++)
+    for(int index = 234; index < 256; index++)
     {
         cout << index << ": contents are: " << musicVector[index] << endl;
     }
