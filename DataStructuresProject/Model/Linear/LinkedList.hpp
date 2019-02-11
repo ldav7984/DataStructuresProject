@@ -142,7 +142,7 @@ Type LinkedList<Type> :: remove(int index)
         toBeRemoved = front;
         this->front = this->front->getNextNode();
     }
-    else //
+    else
     {
         for(int position = 0; position < index; position++)
         {
@@ -152,7 +152,7 @@ Type LinkedList<Type> :: remove(int index)
         
         toBeRemoved = current;
         
-        if(index == this->size -1)
+        if(index == this->size - 1)
         {
             previous->setNextNode(nullptr);
             end = previous;
