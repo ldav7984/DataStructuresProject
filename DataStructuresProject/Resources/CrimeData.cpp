@@ -7,7 +7,10 @@
 //
 
 #include "CrimeData.hpp"
-
+CrimeData :: CrimeData()
+{
+    
+}
 CrimeData :: CrimeData(string currentCSVLine)
 {
     stringstream parseCSV(currentCSVLine);
