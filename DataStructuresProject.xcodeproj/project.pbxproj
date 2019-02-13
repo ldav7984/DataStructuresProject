@@ -10,6 +10,7 @@
 		AB3AB43321FF8C0B00EDA599 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3AB43121FF8C0B00EDA599 /* Controller.cpp */; };
 		AB3AB43521FF8C1600EDA599 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB3AB43421FF8C1600EDA599 /* Runner.cpp */; };
 		AB504C9C22120E5900D2710F /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB504C9B22120E5900D2710F /* Music.cpp */; };
+		ABF4CDC02214AE8900A4D4E7 /* LinearTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABF4CDBE2214AE8900A4D4E7 /* LinearTester.cpp */; };
 		ABFBEC5B220A19670035D460 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABFBEC59220A19670035D460 /* FileController.cpp */; };
 		ABFBEC5F220A1CAF0035D460 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABFBEC5E220A1CAF0035D460 /* CrimeData.cpp */; };
 		ABFBEC67220A1F740035D460 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABFBEC66220A1F740035D460 /* Timer.cpp */; };
@@ -39,6 +40,8 @@
 		AB504C9E2212113600D2710F /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		AB7CA102220CBA4C004F5D6D /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		AB7CA103220CC5B9004F5D6D /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
+		ABF4CDBE2214AE8900A4D4E7 /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LinearTester.cpp; path = DataStructuresProject/Testers/LinearTester.cpp; sourceTree = SOURCE_ROOT; };
+		ABF4CDBF2214AE8900A4D4E7 /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LinearTester.hpp; path = DataStructuresProject/Testers/LinearTester.hpp; sourceTree = SOURCE_ROOT; };
 		ABF54AEC220232A800BF1DE0 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		ABF54AEE2202391400BF1DE0 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		ABFBEC59220A19670035D460 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		AB3AB42521FF8B4900EDA599 /* DataStructuresProject */ = {
 			isa = PBXGroup;
 			children = (
+				ABF4CDBD2214AE5C00A4D4E7 /* Testers */,
 				AB3AB42D21FF8B8100EDA599 /* Model */,
 				AB3AB42E21FF8B8700EDA599 /* Controller */,
 				AB3AB42F21FF8B8E00EDA599 /* Diagrams */,
@@ -129,6 +133,15 @@
 				AB504C982211FFDA00D2710F /* music.csv */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ABF4CDBD2214AE5C00A4D4E7 /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4CDBE2214AE8900A4D4E7 /* LinearTester.cpp */,
+				ABF4CDBF2214AE8900A4D4E7 /* LinearTester.hpp */,
+			);
+			path = Testers;
 			sourceTree = "<group>";
 		};
 		ABF54AEA2202266C00BF1DE0 /* Nodes */ = {
@@ -223,6 +236,7 @@
 				ABFBEC67220A1F740035D460 /* Timer.cpp in Sources */,
 				AB3AB43521FF8C1600EDA599 /* Runner.cpp in Sources */,
 				ABFBEC5B220A19670035D460 /* FileController.cpp in Sources */,
+				ABF4CDC02214AE8900A4D4E7 /* LinearTester.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

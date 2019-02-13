@@ -12,8 +12,8 @@
 #include "../Nodes/LinearNode.hpp"
 #include <assert.h>
 
-template <class> Type
-class List
+template <class Type>
+class List<Type>
 {
 protected:
     int size;
