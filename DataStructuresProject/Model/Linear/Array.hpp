@@ -122,7 +122,7 @@ public:
     {
         assert(index >=0 && index < size);
         Type value = internalArray[index];
-        return values;
+        return value;
     }
     
     template <class Type>

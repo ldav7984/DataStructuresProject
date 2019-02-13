@@ -13,7 +13,7 @@
 #include <assert.h>
 
 template <class Type>
-class List<Type>
+class List
 {
 protected:
     int size;

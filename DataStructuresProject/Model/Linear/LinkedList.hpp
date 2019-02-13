@@ -31,7 +31,7 @@ public:
     
     //Structure methods
     virtual void add(Type item);
-    virtual void addAtInde(int index, Type item);
+    virtual void addAtIndex(int index, Type item);
     virtual Type getFromIndex(int index);
     virtual Type remove(int index);
     //Type setAtIndex(int index, Type item);
@@ -93,15 +93,24 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
     }
     else //Keeps track of pointers to traverse the nodes and adds the new item where needed
     {
-        LinearNode<Type> * previous = nullptr;
-        LinearNode<Type> * current = front;
-        for (int position = 0; position < index; position++)
+        LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
+        if(index == 0)
         {
-            previous = current;
-            current = current->getNextNode();
+            toBeAdded->setNextNode(front);
+            front = toBeAdded;
         }
-        previous->setNextNode(toBeAdded);
-        toBeAdded->setNextNode(current);
+        else
+        {
+            LinearNode<Type> * previous = nullptr;
+            LinearNode<Type> * current = front;
+            for(int position = 0; position < index; position++)
+            {
+                previous = current;
+                current = current->getNextNode();
+            }
+            previous->setNextNode(toBeAdded);
+            toBeAdded->setNextNode(current);
+        }
     }
     this->size++;
 }
@@ -131,7 +140,7 @@ Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size); //Check index for validity
     
-    LinearNod<Type> * current = front;
+    LinearNode<Type> * current = front;
     LinearNode<Type> * toBeRemoved = nullptr;
     LinearNode<Type> * previous = nullptr;
     
@@ -179,11 +188,11 @@ bool LinkedList<Type> :: contains(Type toFind)
     
     for (int index = 0; index < getSize(); index++)
     {
-        if (searchPointer ->getData() == thingToFind)
+        if (searchPointer ->getData() == toFind)
         {
             return true;
         }
-        searchPointer = searchPonter->getNextNode();
+        searchPointer = searchPointer->getNextNode();
     }
     
     return exists;
