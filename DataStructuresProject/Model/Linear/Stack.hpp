@@ -36,6 +36,7 @@ Stack<Type> :: Stack() : LinkedList<Type>()
     //No implementation code needed
 }
 
+//destructor
 template <class Type>
 Stack<Type> :: ~Stack()
 {
@@ -69,6 +70,9 @@ void Stack<Type> :: add(Type data)
     push(data);
 }
 
+//can only add to spot 0
+//the method needs to be here because it's a list
+//but we can't use it the way normal lists do
 template <class Type>
 void Stack<Type> :: addAtIndex(int index, Type data)
 {
@@ -79,7 +83,7 @@ void Stack<Type> :: addAtIndex(int index, Type data)
 template <class Type>
 Type Stack<Type> :: pop()
 {
-    assert (this->size > 0);
+    assert(this->size > 0);
     Type removed = this->front->getData();
     
     LinearNode<Type> * removedNode = this->getFront();

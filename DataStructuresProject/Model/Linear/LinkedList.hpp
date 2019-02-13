@@ -14,7 +14,7 @@ using namespace std;
 #define LinkedList_hpp
 
 template <class Type>
-class LinkedList : public List<Tpe>
+class LinkedList : public List<Type>
 {
 protected:
     LinearNode<Type> * front;
