@@ -7,3 +7,8 @@
 //
 
 #include "LinearTester.hpp"
+
+void LinearTester :: testVsSTL()
+{
+    
+}
