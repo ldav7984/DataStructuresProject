@@ -22,6 +22,8 @@ class Controller
 {
 private:
     void usingNodes();
+    void testLinear();
+    void testLinkedList();
 public:
     void start();
     void testFiles();

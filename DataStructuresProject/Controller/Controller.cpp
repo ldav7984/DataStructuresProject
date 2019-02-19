@@ -13,6 +13,8 @@ void Controller :: start()
     cout << "Data Structures App" << endl;
     usingNodes();
     //testFiles(); //"read from file" assignment
+    //testLinear();
+    testLinkedList();
 }
 
 void Controller :: usingNodes()
@@ -24,6 +26,19 @@ void Controller :: usingNodes()
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
     
+}
+
+void Controller :: testLinear()
+{
+    LinearTester lookitThis;
+    lookitThis.testVsSTL();
+}
+
+void Controller :: testLinkedList()
+{
+    LinkedListTester lookieHere;
+    lookieHere.testListBasics();
+    lookieHere.testListWithData();
 }
 
 //Test that the import works by using the FileController to
