@@ -13,8 +13,8 @@ void Controller :: start()
     cout << "Data Structures App" << endl;
     usingNodes();
     //testFiles(); //"read from file" assignment
-    //testLinear();
-    testLinkedList();
+    testLinear();
+    //testLinkedList();
 }
 
 void Controller :: usingNodes()
