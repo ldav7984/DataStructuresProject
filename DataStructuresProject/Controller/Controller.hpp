@@ -12,6 +12,8 @@
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "../Testers/LinearTester.hpp"
+#include "../Testers/LinkedListTester.hpp"
 #include "FileController.hpp"
 
 using namespace std;

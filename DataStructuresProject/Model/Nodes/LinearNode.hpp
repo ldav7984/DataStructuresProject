@@ -17,9 +17,11 @@ class LinearNode : public Node<Type>
 private:
     LinearNode<Type> * next;
 public:
+    //Constructors
     LinearNode();
     LinearNode(Type data);
     LinearNode(Type data, LinearNode<Type> * next);
+    //Methods
     LinearNode<Type> * getNextNode();
     void setNextNode(LinearNode<Type> * next);
 };
@@ -42,6 +44,8 @@ LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(
     this->next = next;
 }
 
+//Accessor Methods//
+
 template <class Type>
 LinearNode<Type> * LinearNode<Type> :: getNextNode()
 {
@@ -53,6 +57,7 @@ void LinearNode<Type> :: setNextNode(LinearNode<Type> * next)
 {
     this->next = next;
 }
+
 
 
 #endif /* LinearNode_hpp */

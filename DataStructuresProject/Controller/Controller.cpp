@@ -12,7 +12,7 @@ void Controller :: start()
 {
     cout << "Data Structures App" << endl;
     usingNodes();
-    testFiles();
+    //testFiles(); //"read from file" assignment
 }
 
 void Controller :: usingNodes()
