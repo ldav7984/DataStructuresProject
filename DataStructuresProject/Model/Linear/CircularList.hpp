@@ -140,7 +140,7 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     this->size++;
 }
 
-//get from index
+//Get from index
 template <class Type>
 Type CircularList<Type> :: getFromIndex(int index)
 {
@@ -149,7 +149,7 @@ Type CircularList<Type> :: getFromIndex(int index)
     return holder->getData();
 }
 
-//remove from index
+//Remove from index
 template <class Type>
 Type CircularList<Type> :: remove(int index)
 {
@@ -179,7 +179,7 @@ Type CircularList<Type> :: remove(int index)
     return value;
 }
 
-//set at index
+//Set at index
 template <class Type>
 Type CircularList<Type> :: setAtIndex(int index, Type item)
 {
