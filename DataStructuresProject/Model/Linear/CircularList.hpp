@@ -34,7 +34,7 @@ public:
     int getSize() const;
 };
 
-//constructor
+//Constructor
 template <class Type>
 CircularList<Type> :: CircularList()
 {
@@ -43,7 +43,7 @@ CircularList<Type> :: CircularList()
     this->size = 0;
 }
 
-//destructor
+//Destructor
 template <class Type>
 CircularList<Type> :: ~CircularList()
 {
@@ -58,6 +58,7 @@ CircularList<Type> :: ~CircularList()
 }
 
 //Find Node
+//Looks from the closest index we have access to (front or end)
 template <class Type>
 DoubleNode<Type> * CircularList<Type> :: findNode(int index)
 {
