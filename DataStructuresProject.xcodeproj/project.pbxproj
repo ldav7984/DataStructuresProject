@@ -44,6 +44,7 @@
 		AB7CA102220CBA4C004F5D6D /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		AB7CA103220CC5B9004F5D6D /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		AB9DC746221F282D0007F0A5 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
+		AB9DC747221F2F700007F0A5 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
 		ABF4CDBE2214AE8900A4D4E7 /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LinearTester.cpp; path = DataStructuresProject/Testers/LinearTester.cpp; sourceTree = SOURCE_ROOT; };
 		ABF4CDBF2214AE8900A4D4E7 /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LinearTester.hpp; path = DataStructuresProject/Testers/LinearTester.hpp; sourceTree = SOURCE_ROOT; };
 		ABF54AEC220232A800BF1DE0 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 				AB7CA103220CC5B9004F5D6D /* LinkedList.hpp */,
 				AB504C9D22120EBC00D2710F /* Stack.hpp */,
 				AB504C9E2212113600D2710F /* Queue.hpp */,
+				AB9DC747221F2F700007F0A5 /* CircularList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
