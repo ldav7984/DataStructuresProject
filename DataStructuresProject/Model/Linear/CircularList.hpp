@@ -140,6 +140,54 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     this->size++;
 }
 
+//get from index
+template <class Type>
+Type CircularList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->size);
+    DoubleNode<Type> * holder = findNode(index);
+    return holder->getData();
+}
 
+//remove from index
+template <class Type>
+Type CircularList<Type> :: remove(int index)
+{
+    assert(index >= 0 && index < this->size);
+    
+    DoubleNode<Type> * removed = findNode(index);
+    DoubleNode<Type> * removedPrevious = removed->getPrevious();
+    DoubleNode<Type> * removedNext = removed->getNext();
+    
+    if(index == 0)
+    {
+        this->front = removedNext;
+        this->end->setNext(removedNext(;))
+    }
+    if(index == this->size - 1)
+    {
+        this->end = removedPrevious;
+        this->front->setPrevious(removedPrevious);
+    }
+    
+    removedPrevious->setNext(removedNext);
+    removedNext->setPrevious(removedPrevious);
+    
+    Type value = removed->getData();
+    this->size--;
+    delete removed;
+    return value;
+}
+
+//set at index
+template <class Type>
+Type CircularList<Type> :: setAtIndex(int index, Type item)
+{
+    assert(index >=0 && index < size);
+    DoubleNode<Type> * replacedValue = findNode(index);
+    Type replaced = replacedValue->getData();
+    replacedValue->setData(item);
+    return replaced;
+}
 
 #endif /* CircularList_hpp */
