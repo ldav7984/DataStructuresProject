@@ -95,7 +95,7 @@ void CircularList<Type> :: add(Type item)
     }
     else
     {
-        addedNode = new DoubleNode<Type>(item, this->end, this-front);
+        addedNode = new DoubleNode<Type>(item, this->end, this->front);
     }
     this->end->setNext(addedNode);
     this->front->setPrevious(addedNode);
@@ -188,6 +188,13 @@ Type CircularList<Type> :: setAtIndex(int index, Type item)
     Type replaced = replacedValue->getData();
     replacedValue->setData(item);
     return replaced;
+}
+
+//Get size
+template <class Type>
+int CircularList<Type> :: getSize() const
+{
+    return this->size;
 }
 
 #endif /* CircularList_hpp */
