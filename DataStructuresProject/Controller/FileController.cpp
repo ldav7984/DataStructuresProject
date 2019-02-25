@@ -123,6 +123,44 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
     return crimes;
 }
 
+CircularList<CrimeData> FileController :: readDataToCircular(string filename)
+{
+    CircularList<CrimeData> crimeCircular;
+    
+    string currentCSVLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(filename);
+    
+    //If file exists at the path
+    if(dataFile.is_open())
+    {
+        //Read till end of file
+        while(!dataFile.eof())
+        {
+            //grab each line, separated by the carriage return character
+            getline(dataFile, currentCSVLine, '\n');
+            //exclude header row
+            if(rowCount !=0)
+            {
+                //Create a CrimeData instance. Eclude a blank line.
+                if(currentCSVLine.length() != 0)
+                {
+                    CrimeData row(currentCSVLine);
+                    crimeCircular.add(row);
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    return crimeCircular;
+}
+
 LinkedList<Music> FileController :: musicDataToList(string fileName)
 {
     LinkedList<Music> musicList;

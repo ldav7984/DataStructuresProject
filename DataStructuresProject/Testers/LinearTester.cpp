@@ -25,7 +25,7 @@ void LinearTester :: testVsSTL()
     crimeTimerSTL.displayInformation();
     cout << "This is the OOP Node Read time: " << endl;
     crimeTimerOOP.displayInformation();
-    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds() << " microseconds." << endl;
     
     musicSTL.startTimer();
     vector<Music> tunez = FileController :: musicDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/music.csv");
@@ -39,7 +39,7 @@ void LinearTester :: testVsSTL()
     musicSTL.displayInformation();
     cout << "Ths is the OOP Node Read time: " << endl;
     musicOOP.displayInformation();
-    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds." << endl;
     
     crimeTimerOOP.resetTimer();
     crimeTimerSTL.resetTimer();
@@ -60,7 +60,7 @@ void LinearTester :: testVsSTL()
     crimeTimerSTL.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     crimeTimerOOP.displayInformation();
-    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds() << " microseconds." << endl;
     
     randomIndex = rand() % musicList.getSize();
     
@@ -76,7 +76,7 @@ void LinearTester :: testVsSTL()
     musicSTL.displayInformation();
     cout << "This is the OOP Node random retrieval: " << endl;
     musicOOP.displayInformation();
-    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds." << endl;
 }
 
 //processing a vector<CrimeData> into a Stack
@@ -98,11 +98,26 @@ void LinearTester :: testVsStack()
 //processing a vector<Music> into a Queue
 void LinearTester :: testVsQueue()
 {
+    vector<Music>  musicVector = FileController :: musicDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/music.csv");
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/music.csv");
     
+    Queue<Music> musicQueue;
+    
+    for(int index = 0; index < 10; index++)
+    {
+        musicQueue.add(musicVector[index]);
+        cout << musicVector[index] << endl;
+    }
     
 }
 
+//compare time of using double-linked list to single-linked list
 void LinearTester :: testVsDouble()
 {
     Timer crimeTimerSTL, crimeTimerOOP;
+    
+    LinkedList<CrimeData> crimeLinkedList = FileController :: readDataToList("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+    
+    CircularList<CrimeData> crimeCircular = FileController :: readDataToCircular("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+    
 }

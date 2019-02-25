@@ -11,7 +11,7 @@
 void Controller :: start()
 {
     cout << "Data Structures App" << endl;
-    usingNodes();
+    //usingNodes();
     //testFiles(); //"read from file" assignment
     testLinear();
     //testLinkedList();
@@ -32,8 +32,8 @@ void Controller :: testLinear()
 {
     LinearTester lookitThis;
     //lookitThis.testVsSTL();
-    lookitThis.testVsStack();
-    //lookitThis.testVsQueue();
+    //lookitThis.testVsStack();
+    lookitThis.testVsQueue();
     //lookitThis.testVsDouble();
 }
 

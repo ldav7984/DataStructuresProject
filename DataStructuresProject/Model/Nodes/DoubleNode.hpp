@@ -17,7 +17,7 @@ protected:
     DoubleNode<Type> * previous;
     DoubleNode<Type> * next;
 public:
-    DoubleNode():
+    DoubleNode();
     DoubleNode(Type data);
     DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNode<Type> * next);
     
@@ -25,13 +25,13 @@ public:
     DoubleNode<Type> * getNext();
     
     void setPrevious(DoubleNode<Type> * previous);
-    void setNext(DoubleNode<Type> * next)
+    void setNext(DoubleNode<Type> * next);
 };
 
 template <class Type>
 DoubleNode<Type> :: DoubleNode() : Node<Type>()
 {
-    prevoius = nullptr;
+    previous = nullptr;
     next = nullptr;
 }
 

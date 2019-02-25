@@ -48,7 +48,7 @@ template <class Type>
 CircularList<Type> :: ~CircularList()
 {
     DoubleNode<Type> * current = front;
-    while(this->front != nullptr ** this->front != front->getNext())
+    while(this->front != nullptr && this->front != front->getNext())
     {
         front = front->getNext();
         delete current;
@@ -91,7 +91,7 @@ void CircularList<Type> :: add(Type item)
     DoubleNode<Type> * addedNode;
     if(this->size == 0)
     {
-        addedNode = new DoubleNode<Type(item);
+        addedNode = new DoubleNode<Type>(item);
         this->front = addedNode;
     }
     else
@@ -163,7 +163,7 @@ Type CircularList<Type> :: remove(int index)
     if(index == 0)
     {
         this->front = removedNext;
-        this->end->setNext(removedNext(;))
+        this->end->setNext(removedNext);
     }
     if(index == this->size - 1)
     {

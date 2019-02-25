@@ -13,6 +13,7 @@
 #include "../Resources/Music.hpp"
 #include "../Model/Linear/Array.hpp"
 #include "../Model/Linear/LinkedList.hpp"
+#include "../Model/Linear/CircularList.hpp"
 
 #include <string>
 #include <fstream>
@@ -31,6 +32,8 @@ public:
     //LinkedLists
     static LinkedList<CrimeData> readDataToList(string filename);
     static LinkedList<Music> musicDataToList(string filename);
+    //Circular
+    static CircularList<CrimeData> readDataToCircular(string filename);
     //OOP Array
     static Array<Music> musicDataToArray(string filename);
 };
