@@ -114,10 +114,40 @@ void LinearTester :: testVsQueue()
 //compare time of using double-linked list to single-linked list
 void LinearTester :: testVsDouble()
 {
-    Timer crimeTimerSTL, crimeTimerOOP;
+    Timer crimeTimerSLL, crimeTimerDLL;
     
+    crimeTimerSLL.startTimer();
     LinkedList<CrimeData> crimeLinkedList = FileController :: readDataToList("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+    crimeTimerSLL.stopTimer();
     
+    crimeTimerDLL.startTimer();
     CircularList<CrimeData> crimeCircular = FileController :: readDataToCircular("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+    crimeTimerDLL.stopTimer();
+    
+    cout << "This is the Single Linked List Read time: " << endl;
+    crimeTimerSLL.displayInformation();
+    cout << "This is the Doubly Linked List Read time: " << endl;
+    crimeTimerDLL.displayInformation();
+    cout << "A difference of: " << crimeTimerDLL.getTimeInMicroseconds() - crimeTimerSLL.getTimeInMicroseconds() << " microseconds." << endl;
+
+    crimeTimerSLL.resetTimer();
+    crimeTimerDLL.resetTimer();
+    
+    
+    int randomIndex = rand() % crimeCircular.getSize();
+    
+    crimeTimerSLL.startTimer();
+    crimeLinkedList.getFromIndex(randomIndex);
+    crimeTimerSLL.stopTimer();
+    
+    crimeTimerDLL.startTimer();
+    crimeCircular.getFromIndex(randomIndex);
+    crimeTimerDLL.stopTimer();
+    
+    cout << "This is the Single Linked List random retrieval: " << endl;
+    crimeTimerSLL.displayInformation();
+    cout << "This is the Double Linked List random retrieval: " << endl;
+    crimeTimerDLL.displayInformation();
+    cout << "A difference of: " << crimeTimerDLL.getTimeInMicroseconds() - crimeTimerSLL.getTimeInMicroseconds() << " microseconds." << endl;
     
 }

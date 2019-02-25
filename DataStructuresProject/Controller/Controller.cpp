@@ -33,8 +33,8 @@ void Controller :: testLinear()
     LinearTester lookitThis;
     //lookitThis.testVsSTL();
     //lookitThis.testVsStack();
-    lookitThis.testVsQueue();
-    //lookitThis.testVsDouble();
+    //lookitThis.testVsQueue();
+    lookitThis.testVsDouble();
 }
 
 void Controller :: testLinkedList()
