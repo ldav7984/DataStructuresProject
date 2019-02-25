@@ -8,6 +8,7 @@
 
 #include "LinearTester.hpp"
 
+//test Standard Template Library
 void LinearTester :: testVsSTL()
 {
     Timer crimeTimerSTL, crimeTimerOOP, musicSTL, musicOOP;
@@ -76,20 +77,32 @@ void LinearTester :: testVsSTL()
     cout << "This is the OOP Node random retrieval: " << endl;
     musicOOP.displayInformation();
     cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
-    
 }
 
+//processing a vector<CrimeData> into a Stack
 void LinearTester :: testVsStack()
 {
+    vector<CrimeData> crimeVector = FileController :: readCrimeDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+
+    LinkedList<CrimeData> crimeList = FileController :: readDataToList("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
+ 
+    Stack<CrimeData> crimeStack;
     
+    for(int index = 0; index < 10; index++)
+    {
+        crimeStack.push(crimeVector[index]);
+        cout << crimeVector[index] << endl;
+    }
 }
 
+//processing a vector<Music> into a Queue
 void LinearTester :: testVsQueue()
 {
+    
     
 }
 
 void LinearTester :: testVsDouble()
 {
-    
+    Timer crimeTimerSTL, crimeTimerOOP;
 }

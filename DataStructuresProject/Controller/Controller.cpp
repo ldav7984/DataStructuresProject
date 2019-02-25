@@ -31,7 +31,10 @@ void Controller :: usingNodes()
 void Controller :: testLinear()
 {
     LinearTester lookitThis;
-    lookitThis.testVsSTL();
+    //lookitThis.testVsSTL();
+    lookitThis.testVsStack();
+    //lookitThis.testVsQueue();
+    //lookitThis.testVsDouble();
 }
 
 void Controller :: testLinkedList()
