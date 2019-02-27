@@ -102,7 +102,6 @@ void CircularList<Type> :: add(Type item)
         this->end->setNext(addedNode);
     }
     
-    this->end->setNext(addedNode);
     this->front->setPrevious(addedNode);
     this->end = addedNode;
     this->size++;

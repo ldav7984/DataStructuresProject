@@ -149,5 +149,4 @@ void LinearTester :: testVsDouble()
     cout << "This is the Double Linked List random retrieval: " << endl;
     crimeTimerDLL.displayInformation();
     cout << "A difference of: " << crimeTimerDLL.getTimeInMicroseconds() - crimeTimerSLL.getTimeInMicroseconds() << " microseconds." << endl;
-    
 }
