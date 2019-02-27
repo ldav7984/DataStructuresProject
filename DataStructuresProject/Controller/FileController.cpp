@@ -103,7 +103,7 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
             //grab each line, separated by the carriage return character
             getline(dataFile, currentCSVLine, '\n');
             //exclude header row
-            if(rowCount !=0)
+            if(rowCount != 0)
             {
                 //Create a CrimeData instance. Eclude a blank line.
                 if(currentCSVLine.length() != 0)
@@ -141,7 +141,7 @@ CircularList<CrimeData> FileController :: readDataToCircular(string filename)
             //grab each line, separated by the carriage return character
             getline(dataFile, currentCSVLine, '\n');
             //exclude header row
-            if(rowCount !=0)
+            if(rowCount != 0)
             {
                 //Create a CrimeData instance. Eclude a blank line.
                 if(currentCSVLine.length() != 0)

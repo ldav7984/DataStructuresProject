@@ -134,7 +134,7 @@ void LinearTester :: testVsDouble()
     crimeTimerDLL.resetTimer();
     
     
-    int randomIndex = rand() % crimeCircular.getSize();
+    int randomIndex = rand() % crimeLinkedList.getSize();
     
     crimeTimerSLL.startTimer();
     crimeLinkedList.getFromIndex(randomIndex);

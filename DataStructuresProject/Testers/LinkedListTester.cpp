@@ -93,15 +93,3 @@ void LinkedListTester :: testListWithData()
     listTimer.displayInformation();
 }
 
-//vector<Music> musicVector = FileController :: musicDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/music.csv");
-//
-//vector<CrimeData> crimeVector = FileController :: readCrimeDataToVector("/Users/ldav7984/C++ Projects/DataStructuresProject/DataStructuresProject/Resources/crime.csv");
-//
-//for(int index = 234; index < 256; index++)
-//{
-//    cout << index << ": contents are: " << crimeVector[index] << endl;
-//    }
-//    for(int index = 234; index < 256; index++)
-//    {
-//        cout << index << ": contents are: " << musicVector[index] << endl;
-//        }
