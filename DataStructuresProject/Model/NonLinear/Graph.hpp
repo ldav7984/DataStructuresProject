@@ -70,7 +70,7 @@ So can't remove from a Graph
 No remove() method
 */
 
-//Accessors/Getters//
+/*Accessors*/
 
 template <class Type>
 int Graph<Type> :: size()
@@ -96,7 +96,7 @@ Type Graph<Type> :: operator[](int vertex) const
     return graphData[vertex];
 }
 
-//Adding Vertices//
+/*Adding Vertices*/
 
 //Adding a vertex
 //If the graph is not fll, assigns adjacency matrix index to be the current vertex count
@@ -117,7 +117,7 @@ void Graph<Type> :: addVertex(const Type& value)
     graphData[newVertexNumber] = value;
 }
 
-//Adding Edges//
+/*Adding Edges*/
 
 //Adds a directed edge
 template <class Type>
@@ -144,6 +144,9 @@ void Graph<Type> :: addEdgeUndirected(int source, int target)
     adjacencyMatrix[source][target] = true;
     adjacencyMatrix[target][source] = true;
 }
+
+/*Removing Edges*/
+
 
 
 #endif /* Graph_hpp */
