@@ -120,6 +120,7 @@ void Graph<Type> :: addVertex(const Type& value)
 /*Adding Edges*/
 
 //Adds a directed edge
+//Connection from one node to another
 template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
@@ -128,6 +129,7 @@ void Graph<Type> :: addEdge(int source, int target)
 }
 
 //Adds an undirected edge
+//Two-way connection cost
 template <class Type>
 void Graph<Type> :: addEdgeCost(int source, int target, int cost)
 {
@@ -136,7 +138,8 @@ void Graph<Type> :: addEdgeCost(int source, int target, int cost)
     weightCostMatrix[target][source] = cost;
 }
 
-//Adds weighted(undirected) graph
+//Adds weighted(undirected) edge
+//Makes a two-way connection
 template <class Type>
 void Graph<Type> :: addEdgeUndirected(int source, int target)
 {
@@ -148,8 +151,9 @@ void Graph<Type> :: addEdgeUndirected(int source, int target)
 /*Removing Edges*/
 
 template <class Type>
+void Graph<Type> :: removeEdge(int source, int target)
 {
-    void Graph<Type> :: removeEdge < vertexCount && target >= 0 && target < vertexCount);
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = false;
 }
 
@@ -197,7 +201,7 @@ template <class Type>
 std::set<int> Graph<Type> :: neighbors(int vertex) const
 {
     assert(vertex < vertexCount);
-    std::set<int> vertexNeighbors;
+    std::set<int> vertexNeighbors; //can't have duplicates
     
     for(int index = 0; index < vertexCount; index++)
     {
@@ -250,6 +254,8 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
     std::queue<int> vertexQueue;
     
     std::fill_n(visited,currentGraph.size(),false);
+    //fill_n initializes the entire array to a default false
+    //takes care of null pointers
     visited[vertex] = true;
     cout << currentGraph[vertex] << endl;
     vertexQueue.push(vertex);
