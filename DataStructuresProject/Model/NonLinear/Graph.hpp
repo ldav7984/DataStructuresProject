@@ -12,6 +12,7 @@
 #include <set>
 #include <queue>
 #include <assert.h>
+#include <iostream>
 
 using namespace std;
 template <class Type>
@@ -32,7 +33,7 @@ public:
     //Connect vertices
     void addEdge(int source, int target);
     void addEdgeUndirected(int source, int target);
-    void addEdgeConst(int source, int target, int cost);
+    void addEdgeCost(int source, int target, int cost);
     //Disconnect vertices
     void removeEdge(int source, int target);
     void removeEdgeUndirected(int source, int target);
@@ -55,13 +56,19 @@ public:
 };
 
 template <class Type>
-const int Graph<Time> :: MAXIMUM;
+const int Graph<Type> :: MAXIMUM;
 
 //Constructor
 template <class Type>
 Graph<Type> :: Graph()
 {
     this->vertexCount = 0;
+    
+    for(int index = 0; index < MAXIMUM; index++)
+    {
+        int * row = weightCostMatrix[index];
+        std::fill_n(row, MAXIMUM, 0);
+    }
 }
 
 /*
@@ -73,7 +80,7 @@ No remove() method
 /*Accessors*/
 
 template <class Type>
-int Graph<Type> :: size()
+int Graph<Type> :: size() const
 {
     return vertexCount;
 }
@@ -125,7 +132,7 @@ template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
-    adjacentyMatrix[source][target] = true;
+    adjacencyMatrix[source][target] = true;
 }
 
 //Adds an undirected edge
@@ -170,7 +177,7 @@ void Graph<Type> :: removeEdgeUndirected(int source, int target)
 template <class Type>
 void Graph<Type> :: removeEdgeCost(int source, int target)
 {
-    assert(source >= 0 & source < vertexCount && target >=  && target < vertexCount);
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     weightCostMatrix[source][target] = 0;
     weightCostMatrix[target][source] = 0;
 }
@@ -182,17 +189,19 @@ template <class Type>
 bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    
+    bool isAnEdge = false;
     isAnEdge = adjacencyMatrix[source][target] || adjacencyMatrix[target][source];
     return isAnEdge;
 }
 
 template <class Type>
-bool Graph<Type> :: areConnected(it source, int target) const
+bool Graph<Type> :: areConnected(int source, int target) const
 {
-    assert(source >= 0 && source < vertexCount && target <= 0 target < vertexCount);
+    assert(source >= 0 && source < vertexCount && target <= 0 && target < vertexCount);
     
     bool isAnEdge = false;
-    isAnEdge = adjacencyMatrix[source][target]
+    isAnEdge = adjacencyMatrix[source][target];
     return isAnEdge;
 }
 
@@ -219,7 +228,7 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
 template <class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
-    bool visitedVerticies[MAXIMUM];
+    bool visitedVertices[MAXIMUM];
     assert(vertex < currentGraph.size());
     std::fill_n(visitedVertices, currentGraph.size(), false);
     depthFirstTraversal(currentGraph, vertex, visitedVertices);
@@ -238,7 +247,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     {
         if(!visited[*setIterator])
         {
-            depthFirstTraversal(currentGraph, *setIterator, visted);
+            depthFirstTraversal(currentGraph, *setIterator, visited);
         }
     }
 }
@@ -268,7 +277,7 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
         {
             if(!visited[*setIterator])
             {
-                visted[*setIterator] = true;
+                visited[*setIterator] = true;
                 cout << currentGraph[*setIterator] << endl;
                 vertexQueue.push(*setIterator);
             }
