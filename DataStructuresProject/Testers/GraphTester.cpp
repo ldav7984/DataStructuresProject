@@ -15,15 +15,69 @@ void GraphTester :: testGraphs()
     findCheapestTraversal();
 }
 
+//Traverse the Graph and find the two quotes
+//Use a loop to check all the traversals
 void GraphTester :: compareTraversals()
 {
-    
+//    cout << "Breadth First Traversal" << endl;
+//    for(int vertex = 0; vertex < puzzle.size(); vertex++)
+//    {
+//        cout << "Vertex " << vertex << ": " << endl;
+//        puzzle.breadthFirstTraversal(puzzle, vertex);
+//        cout << " " << endl;
+//    }
+//
+//    cout << "Depth First Traversal" << endl;
+//    for(int vertex = 0; vertex < puzzle.size(); vertex++)
+//    {
+//        cout << "Vertex " << vertex << ": " << endl;
+//        puzzle.depthFirstTraversal(puzzle, vertex);
+//        cout << " " << endl;
+//    }
+    for(int index = 0; index < puzzle.size(); index++)
+    {
+        cout << "At Breadth Index: " << index << endl;
+        puzzle.breadthFirstTraversal(puzzle, index);
+        cout << "At Depth Index: " << index << endl;
+        puzzle.depthFirstTraversal(puzzle, index);
+    }
 }
+//Traversal: Depth
+//Parameter: vertex 33
+//Quote: "It should be mandatory that you understand computer science."
+//Author: will.i.am
 
+//Traversal: Breadth
+//Parameter: 9
+//Quote: "It is very difficult to solve a lot of problems from the top down."
+//Author: Megan Smith
+
+//The cheapest traversal was at vertex 31, with a cost of 1
+
+//Grace Hopper state must procedures relationships 
+//
+
+//Find the cheapest non-zero traversal
 void GraphTester :: findCheapestTraversal()
 {
-    
+    int cheapestVertex = -1;
+    int cheapestCost = 9999;
+    cout << "Cost Traversal" << endl;
+    for(int vertex = 0; vertex < puzzle.size(); vertex++)
+    {
+        //cout << "Vertex " << vertex << ": " << endl;
+        //cout << puzzle.costTraversal(puzzle, vertex) << endl;;
+        //cout << " " << endl;
+        int currentCost = puzzle.costTraversal(puzzle, vertex);
+        if(currentCost < cheapestCost && currentCost > 0)
+        {
+            cheapestCost = currentCost;
+            cheapestVertex = vertex;
+        }
+    }
+    cout << "The cheapest traversal cost is " << cheapestCost << ", at vertex " << cheapestVertex << endl;
 }
+//vertex 31 has a cost of 1, the cheapest non-zero traversal
 
 void GraphTester :: setup()
 {

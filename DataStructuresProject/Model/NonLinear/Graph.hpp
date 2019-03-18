@@ -296,7 +296,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
     std::set<int>::iterator setIterator;
     std::queue<int> vertexQueue;
     
-    std::fill_n(visited.currentGraph.size(),false);
+    std::fill_n(visited,currentGraph.size(),false);
     visited[start] = true;
     
     vertexQueue.push(start);

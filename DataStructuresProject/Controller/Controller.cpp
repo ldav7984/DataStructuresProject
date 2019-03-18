@@ -13,8 +13,9 @@ void Controller :: start()
     cout << "Data Structures App" << endl;
     //usingNodes();
     //testFiles(); //"read from file" assignment
-    testLinear();
+    //testLinear();
     //testLinkedList();
+    testGraph();
 }
 
 void Controller :: usingNodes()
@@ -35,6 +36,12 @@ void Controller :: testLinear()
     //lookitThis.testVsStack();
     //lookitThis.testVsQueue();
     lookitThis.testVsDouble();
+}
+
+void Controller :: testGraph()
+{
+    GraphTester lookie;
+    lookie.testGraphs();
 }
 
 void Controller :: testLinkedList()
