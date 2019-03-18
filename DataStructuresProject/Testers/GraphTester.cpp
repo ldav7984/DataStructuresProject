@@ -26,7 +26,6 @@ void GraphTester :: compareTraversals()
 //        puzzle.breadthFirstTraversal(puzzle, vertex);
 //        cout << " " << endl;
 //    }
-//
 //    cout << "Depth First Traversal" << endl;
 //    for(int vertex = 0; vertex < puzzle.size(); vertex++)
 //    {
@@ -54,8 +53,7 @@ void GraphTester :: compareTraversals()
 
 //The cheapest traversal was at vertex 31, with a cost of 1
 
-//Grace Hopper state must procedures relationships 
-//
+//Grace Hopper does not have a quote
 
 //Find the cheapest non-zero traversal
 void GraphTester :: findCheapestTraversal()
