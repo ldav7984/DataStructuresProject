@@ -19,20 +19,19 @@ void BinaryTreeTester :: doTreeStuff()
     testTree.insert(2);
     testTree.insert(1000);
     testTree.insert(87);
-    
     testTree.inOrderTraversal();
-    //testTree.preOrderTraversal();
-    //testTree.postOrderTraversal();
+    testTree.preOrderTraversal();
+    testTree.postOrderTraversal();
     
-    wordTree.insert("Hi");
+    
+    wordTree.insert("Wassup");
     wordTree.insert("Yeet");
     wordTree.insert("Fish");
     wordTree.insert("Alphabet");
-    wordTree.insert("zebra");
+    wordTree.insert("Zebra");
     wordTree.insert("Food");
     wordTree.insert("Pizza");
-    
     wordTree.inOrderTraversal();
-    //wordTree.preOrderTraveresal();
-    //wordTree.postOrderTraversal();
+    wordTree.preOrderTraversal();
+    wordTree.postOrderTraversal();
 }
