@@ -15,8 +15,11 @@ void Controller :: start()
     //testFiles(); //"read from file" assignment
     //testLinear();
     //testLinkedList();
-    testGraph();
+    //testGraph();
+    testBinaryTree();
 }
+
+
 
 void Controller :: usingNodes()
 {
@@ -26,6 +29,7 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
+    
     
 }
 
@@ -42,6 +46,12 @@ void Controller :: testGraph()
 {
     GraphTester lookie;
     lookie.testGraphs();
+}
+
+void Controller :: testBinaryTree()
+{
+    BinaryTreeTester tree;
+    tree.doTreeStuff();
 }
 
 void Controller :: testLinkedList()

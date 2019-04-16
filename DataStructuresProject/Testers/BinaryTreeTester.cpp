@@ -25,12 +25,14 @@ void BinaryTreeTester :: doTreeStuff()
     //testTree.postOrderTraversal();
     
     wordTree.insert("Hi");
-    wordTree.insert("I");
-    wordTree.insert("am");
-    wordTree.insert("a");
+    wordTree.insert("Yeet");
+    wordTree.insert("Fish");
+    wordTree.insert("Alphabet");
     wordTree.insert("zebra");
-    wordTree.insert("named");
-    wordTree.insert("Zecorah");
+    wordTree.insert("Food");
+    wordTree.insert("Pizza");
     
     wordTree.inOrderTraversal();
+    //wordTree.preOrderTraveresal();
+    //wordTree.postOrderTraversal();
 }

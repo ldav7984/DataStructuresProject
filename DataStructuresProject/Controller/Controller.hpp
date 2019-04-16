@@ -15,6 +15,7 @@
 #include "../Testers/LinearTester.hpp"
 #include "../Testers/LinkedListTester.hpp"
 #include "../Testers/GraphTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
 #include "FileController.hpp"
 
 using namespace std;
@@ -26,6 +27,7 @@ private:
     void testLinear();
     void testLinkedList();
     void testGraph();
+    void testBinaryTree();
 public:
     void start();
     void testFiles();
