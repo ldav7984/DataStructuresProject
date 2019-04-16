@@ -44,6 +44,8 @@
 		AB5EA08A2266481200023414 /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
 		AB5EA08B22664EC000023414 /* BinaryTreeTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTreeTester.cpp; sourceTree = "<group>"; };
 		AB5EA08C22664EC000023414 /* BinaryTreeTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeTester.hpp; sourceTree = "<group>"; };
+		AB5EA08E2266507500023414 /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
+		AB5EA08F2266511500023414 /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		AB7740E4221C8D4C0069CBB2 /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
 		AB7740E5221C8D4C0069CBB2 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
 		AB7CA102220CBA4C004F5D6D /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
@@ -153,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				ABECD53D222DC32F00CB6B27 /* Graph.hpp */,
+				AB5EA08E2266507500023414 /* BinarySearchTree.hpp */,
+				AB5EA08F2266511500023414 /* Tree.hpp */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";

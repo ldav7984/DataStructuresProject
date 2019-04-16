@@ -1,14 +1,13 @@
 //
-//  BinaryTreeTester.cpp
+//  BinarySearchTree.hpp
 //  DataStructuresProject
 //
 //  Created by Davis, Lauren on 4/16/19.
 //  Copyright © 2019 Davis, Lauren. All rights reserved.
 //
 
-#include "BinaryTreeTester.hpp"
+#ifndef BinarySearchTree_hpp
+#define BinarySearchTree_hpp
 
-void BinaryTreeTester :: treeStuff()
-{
-    
-}
+
+#endif /* BinarySearchTree_hpp */
