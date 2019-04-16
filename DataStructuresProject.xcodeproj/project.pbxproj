@@ -40,6 +40,7 @@
 		AB504C9B22120E5900D2710F /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Music.cpp; sourceTree = "<group>"; };
 		AB504C9D22120EBC00D2710F /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		AB504C9E2212113600D2710F /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		AB5EA08A2266481200023414 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
 		AB7740E4221C8D4C0069CBB2 /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
 		AB7740E5221C8D4C0069CBB2 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
 		AB7CA102220CBA4C004F5D6D /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 				AB3AB43621FF916900EDA599 /* Node.hpp */,
 				ABF54AEC220232A800BF1DE0 /* LinearNode.hpp */,
 				AB9DC746221F282D0007F0A5 /* DoubleNode.hpp */,
+				AB5EA08A2266481200023414 /* BinaryTreeNode.h */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
