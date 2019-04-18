@@ -9,14 +9,15 @@
 #ifndef BinaryTreeTester_hpp
 #define BinaryTreeTester_hpp
 
-#include <iostream>
 #include "../Model/Nodes/BinaryTreeNode.hpp"
 #include "../Model/NonLinear/BinarySearchTree.hpp"
+#include <iostream>
 
 class BinaryTreeTester
 {
 private:
     BinaryTreeNode<int> testNode;
+    
     BinarySearchTree<int> testTree;
     BinarySearchTree<string> wordTree;
 public:
