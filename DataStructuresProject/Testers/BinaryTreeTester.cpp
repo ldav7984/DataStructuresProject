@@ -25,6 +25,12 @@ void BinaryTreeTester :: doTreeStuff()
     testTree.preOrderTraversal();
     cout << "int post order traversal:" << endl;
     testTree.postOrderTraversal();
+    cout << "Height:" << endl;
+    cout << testTree.getHeight() << endl;
+    cout << "Is balanced:" << endl;
+    cout << testTree.isBalanced() << endl;
+    cout << "Is complete:" << endl;
+    cout << testTree.isComplete() << endl;
     
     
     wordTree.insert("Wassup");
@@ -40,4 +46,10 @@ void BinaryTreeTester :: doTreeStuff()
     wordTree.preOrderTraversal();
     cout << "string post order traversal:" << endl;
     wordTree.postOrderTraversal();
+    cout << "Height:" << endl;
+    cout << wordTree.getHeight() << endl;
+    cout << "Is Balanced:" << endl;
+    cout << wordTree.isBalanced() << endl;
+    cout << "Is Complete:" << endl;
+    cout << wordTree.isComplete() << endl;
 }
