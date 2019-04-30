@@ -127,7 +127,9 @@ BinaryTreeNode<Type> * AVLTree<Type> :: removeNode(BinaryTreeNode<Type> * parent
 }
 
 /*
- A negative value means the right is greater than the left
+ A negative value means the right is heavier than the left
+ A positive value means the left is heavier than the right
+ 0 Means it is balanced
  */
 template <class Type>
 int AVLTree<Type> :: heightDifference(BinaryTreeNode<Type> * node)

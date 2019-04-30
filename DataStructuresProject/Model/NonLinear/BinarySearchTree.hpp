@@ -490,12 +490,14 @@ BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNod
     }
     return previous;
 }
-    
+     
 template <class Type>
 Type BinarySearchTree<Type> :: findMaximum()
 {
     assert(this->root != nullptr);
-    return getRightMostChild(this->root)->getData();
+    BinaryTreeNode<Type> * maxNode = getRightMostChild(this->root);
+    return maxNode->getData();
+    //return getRightMostChild(this->root)->getData();
 }
 
 template <class Type>
