@@ -16,8 +16,8 @@ class AVLTree : public BinarySearchTree<Type>
 {
 private:
     
-    BinaryTreeNode<Type> * leftRotation(BinaryTreeNode<Type> * parent);
-    BinaryTreeNode<Type> * rightRotation(BinaryTreeNode<Type> * parent);
+    BinaryTreeNode<Type> * leftHeavyRotation(BinaryTreeNode<Type> * parent);
+    BinaryTreeNode<Type> * rightHeavyRotation(BinaryTreeNode<Type> * parent);
     BinaryTreeNode<Type> * leftRightRotation(BinaryTreeNode<Type> * parent);
     BinaryTreeNode<TYpe> * rightLeftRotation(BinaryTreeNode<Type> * parent);
     
@@ -173,8 +173,9 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree(BinaryTreeNode<Type> * pa
 
 //Rotations//
 
+//Used if the tree is right-heavy
 template <class Type>
-BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation(BinaryTreeNode<Type> * parent)
+BinaryTreeNode<Type> * AVLTree<Type> :: leftHeavyRotation(BinaryTreeNode<Type> * parent)
 {
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getLeftChild();
@@ -187,8 +188,9 @@ BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation(BinaryTreeNode<Type> * pare
     return changedNode;
 }
 
+//Used if the tree is left-heavy
 template <class Type>
-BinaryTreeNode<Type> * AVLTree<Type> :: rightRotation(BinaryTreeNode<Type> * parent)
+BinaryTreeNode<Type> * AVLTree<Type> :: rightHeavyRotation(BinaryTreeNode<Type> * parent)
 {
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getRightChild();
@@ -207,10 +209,11 @@ BinaryTreeNode<Type> * AVLTree<Type> :: rightLeftRotation(BinaryTreeNode<Type> *
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getRightChild();
     
-    parent->setRightChild(leftRotation(changedNode));
+    parent->setRightChild(leftHeavyRotation(changedNode));
     
     return rightRotation(parent);
 }
+
 
 template <class Type>
 BinaryTreeNode<Type> * AVLTree<Type>:: leftRightRotation(BinaryTreeNode<Type> * parent)
@@ -218,7 +221,7 @@ BinaryTreeNode<Type> * AVLTree<Type>:: leftRightRotation(BinaryTreeNode<Type> * 
     BinaryTreeNode<Type> * changedNode;
     changedNode = parent->getLeftChild();
     
-    parent->setLeftChild(rightRotation(changedNode));
+    parent->setLeftChild(rightHeavyRotation(changedNode));
     
     return leftRotation(parent);
 }
