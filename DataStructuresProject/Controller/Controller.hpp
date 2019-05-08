@@ -23,7 +23,10 @@ using namespace std;
 class Controller
 {
 private:
+    int size;
+    int position;
     void usingNodes();
+    long simpleHash(string);
     void testLinear();
     void testLinkedList();
     void testGraph();

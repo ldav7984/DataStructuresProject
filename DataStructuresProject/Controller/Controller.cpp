@@ -11,14 +11,38 @@
 void Controller :: start()
 {
     cout << "Data Structures App" << endl;
+    
     //usingNodes();
     //testFiles(); //"read from file" assignment
     //testLinear();
     //testLinkedList();
     //testGraph();
-    testBinaryTree();
+    //testBinaryTree();
+    int size = 101;
+    int position = simpleHash("cat") % size;
+    cout << position << endl;
+    position = simpleHash("Lauren") % size;
+    cout << position << endl;
+    position = simpleHash("Henrichsen") % size;
+    cout << position << endl;
+    position = simpleHash("The quick brown fox jumped over the lazy dog!") % size;
+    cout << position << endl;
+    
+    cout << simpleHash("cat") << endl;
+    cout << simpleHash("Lauren") << endl;
+    cout << simpleHash("Henrichsen") << endl;
+    cout << simpleHash("The quick brown fox jumped over the lazy dog!") << endl;
 }
 
+long Controller :: simpleHash(string word)
+{
+    long hash = 0;
+    for (int index = 0; index < word.length(); index++)
+    {
+        hash += (int)(word[index]);
+    }
+    return hash;
+}
 
 
 void Controller :: usingNodes()
